@@ -10,16 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var displayResultLabel: UILabel!
-    
-//    displayResultLabel.textColor =  UIColor { tc in
-//             switch tc.userInterfaceStyle {
-//             case .dark:
-//                 return UIColor.white
-//             default:
-//                 return UIColor.black
-//    
-//             }
-//         }
+
     let programmerButton = CalcButton()
     
     var stillTyping = false
@@ -122,10 +113,10 @@ class ViewController: UIViewController {
     
     @IBAction func xPowerOfTwo(_ sender: UIButton) {
         currentInput *= currentInput
-            dropUnusedZero()
+            dropUnusedZeroForInfoLabel()
     }
     
-    fileprivate func dropUnusedZero() {
+    fileprivate func dropUnusedZeroForInfoLabel() {
         let ifResultBecameDouble = displayResultLabel.text!.contains(".")
         if dotIsPlaced || ifResultBecameDouble {
             textActionsLabel.text! = String(currentInput)
@@ -137,20 +128,20 @@ class ViewController: UIViewController {
     
     @IBAction func xСubed(_ sender: UIButton) {
         currentInput = pow(currentInput, 3)
-        dropUnusedZero()
+        dropUnusedZeroForInfoLabel()
     }
     
     @IBAction func sinus(_ sender: UIButton) {
         currentInput = sin(currentInput * .pi / 180)
-         dropUnusedZero()
+         dropUnusedZeroForInfoLabel()
     }
     @IBAction func cosine(_ sender: UIButton) {
         currentInput = cos(currentInput * .pi / 180)
-         dropUnusedZero()
+         dropUnusedZeroForInfoLabel()
     }
     @IBAction func tangent(_ sender: UIButton) {
         currentInput = tan(currentInput * .pi / 180)
-         dropUnusedZero()
+         dropUnusedZeroForInfoLabel()
     }
     
     
@@ -250,7 +241,7 @@ class ViewController: UIViewController {
         if !operationSign.isEmpty
             && !textActionsLabel.text!.isEmpty
             && sender.titleLabel!.text != "=" {
-            dropUnusedZero()
+            dropUnusedZeroForInfoLabel()
         }
     }
     
@@ -260,20 +251,30 @@ class ViewController: UIViewController {
     }
     
     @IBAction func persentageButtonPressed(_ sender: UIButton) {
+        // the same as func dropUnusedZeroForInfoLabel below, but concat as +=
+        let ifResultBecameDouble = displayResultLabel.text!.contains(".")
+        if dotIsPlaced || ifResultBecameDouble {
+            textActionsLabel.text! += String(currentInput)
+        }else {
+            textActionsLabel.text! += String(Int(currentInput))
+
+        }
         if firstOperand == 0 {
             currentInput = currentInput / 100
         }else{
             currentInput = firstOperand * currentInput / 100
         }
         stillTyping = false
+        textActionsLabel.text! += "%"
     }
+    
     @IBAction func squareRootButtonPressed(_ sender: UIButton) {
         if currentInput >= 0{
             currentInput = sqrt(currentInput)
         }else{
             displayResultLabel.text = "ERROR"
         }
-         dropUnusedZero()
+         dropUnusedZeroForInfoLabel()
     }
     
     @IBAction func dotButtonPressed(_ sender: UIButton) {

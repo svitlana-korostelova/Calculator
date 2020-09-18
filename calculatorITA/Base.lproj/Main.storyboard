@@ -158,6 +158,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="93.5" height="104"/>
                                                 <color key="backgroundColor" name="lighter"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <color key="tintColor" name="tint"/>
                                                 <state key="normal" title="С">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -166,12 +167,6 @@
                                                         <integer key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
-                                                <variation key="heightClass=compact-widthClass=regular">
-                                                    <nil key="tintColor"/>
-                                                </variation>
-                                                <variation key="heightClass=regular-widthClass=compact">
-                                                    <nil key="tintColor"/>
-                                                </variation>
                                                 <connections>
                                                     <action selector="clearButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iZ5-yV-pZF"/>
                                                 </connections>
@@ -537,16 +532,19 @@
             <point key="canvasLocation" x="-92.753623188405811" y="-184.15178571428569"/>
         </scene>
     </scenes>
-    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+    <color key="tintColor" name="tint"/>
     <resources>
         <namedColor name="dark">
             <color red="0.070000000298023224" green="0.55099999904632568" blue="0.41200000047683716" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="lighter">
-            <color red="0.49923700090000001" green="0.69584172960000001" blue="0.56468999389999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.49900001287460327" green="0.69599997997283936" blue="0.56499999761581421" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="lightest">
-            <color red="0.67511928080000005" green="0.86083739999999997" blue="0.70978480580000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.67500001192092896" green="0.86100000143051147" blue="0.70999997854232788" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="tint">
+            <color red="0.97963594592324987" green="1" blue="0.984675240843085" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>
