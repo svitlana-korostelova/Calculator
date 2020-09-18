@@ -9,10 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var displayResultLabel: UILabel!
-
-    let programmerButton = CalcButton()
     
+    let programmerButton = CalcButton()
+    var isAddSectionHidden = true // признак скрывать кнопки, которым он задан или нет
     var stillTyping = false
     var firstOperand: Double = 0
     var secondOperand: Double = 0
@@ -34,6 +33,7 @@ class ViewController: UIViewController {
             stillTyping = false
         }
     }
+    @IBOutlet weak var displayResultLabel: UILabel!
     @IBOutlet weak var mod: UIButton!
     @IBOutlet weak var squareRoot: UIButton!
     @IBOutlet weak var equal: UIButton!
@@ -49,109 +49,34 @@ class ViewController: UIViewController {
         programmerButton.addTarget(self, action: #selector(hideFewButtons(_:)), for: .touchUpInside)
         programmerButton.isOpaque = false
         programmerButton.backgroundColor = UIColor(named: "dark")
-        
-        
         programmerStackView.addArrangedSubview(programmerButton)
-        
-        setupUI()
+        setupUI() // check if needed
         programmerButton.titleLabel?.font = UIFont.systemFont(ofSize: 50)
-        programmerButton.contentVerticalAlignment = .center
         
         NotificationCenter.default.addObserver(self, selector: #selector(onOrientationChanged), name: UIDevice.orientationDidChangeNotification, object: nil)
-        
     }
     
-    
-    var isAddSectionHidden = true // признак скрывать кнопки, которым он задан или нет
-    
-    
-    @objc private func onOrientationChanged() {
-        setupEqualsButton()
+    @objc func hideFewButtons(_ sender: UIButton) {
+        isAddSectionHidden = !isAddSectionHidden
+        setupUI()
     }
     
-    fileprivate func setupEqualsButton() { // констрейнту выставляем только при повороте экрана
-        let buttonHeight: CGFloat = 0.4 * (mainStackView.frame.height - 3 * 3) + 2
-        
-        equalHeightConstraint.constant = buttonHeight
-    }
-    
-    //    override func viewDidLayoutSubviews() {
-    //        super.viewDidLayoutSubviews()
-    //        setupEqualsButton()
-    //        setupUI()
-    //    }
-    
-    fileprivate func setupUI() { // устанавливаем значения кнопкам, кнопку по которой это делаем переименовываем
+    fileprivate func setupUI() {
         if isAddSectionHidden {
             programmerButton.setTitle("︽", for: .normal)
-            //            programmerButton.setImage(UIImage(named: "arrowTop"), for: .normal)
-            
         } else {
             programmerButton.setTitle("︾", for: .normal)
             //            programmerButton.contentVerticalAlignment = .bottom
-            //                UIControl.ContentVerticalAlignment.bottom
-            //            programmerButton.setImage(UIImage(named: "arrowDown"), for: .normal)
         }
         mod.isHidden = isAddSectionHidden
         squareRoot.isHidden = isAddSectionHidden
     }
     
-    
-    
-    @objc func hideFewButtons(_ sender: UIButton) { //меняет инверсионно по нажатию скрывать группу кнопок или открывать
-        isAddSectionHidden = !isAddSectionHidden
-        setupUI()
-        //        programmerButton.contentVerticalAlignment = .bottom
-        //
-        //        if !isAddSectionHidden{
-        //            programmerButton.contentVerticalAlignment = .bottom
-        //        }
+    @objc private func onOrientationChanged() {
+        // констрейнту выставляем только при повороте экрана
+        let buttonHeight: CGFloat = 0.4 * (mainStackView.frame.height - 3 * 3) + 2
+        equalHeightConstraint.constant = buttonHeight
     }
-    
-    
-    
-    
-    @IBAction func xPowerOfTwo(_ sender: UIButton) {
-        currentInput *= currentInput
-            dropUnusedZeroForInfoLabel()
-    }
-    
-    fileprivate func dropUnusedZeroForInfoLabel() {
-        let ifResultBecameDouble = displayResultLabel.text!.contains(".")
-        if dotIsPlaced || ifResultBecameDouble {
-            textActionsLabel.text! = String(currentInput)
-        }else {
-            textActionsLabel.text! = String(Int(currentInput))
-        }
-        
-    }
-    
-    @IBAction func xСubed(_ sender: UIButton) {
-        currentInput = pow(currentInput, 3)
-        dropUnusedZeroForInfoLabel()
-    }
-    
-    @IBAction func sinus(_ sender: UIButton) {
-        currentInput = sin(currentInput * .pi / 180)
-         dropUnusedZeroForInfoLabel()
-    }
-    @IBAction func cosine(_ sender: UIButton) {
-        currentInput = cos(currentInput * .pi / 180)
-         dropUnusedZeroForInfoLabel()
-    }
-    @IBAction func tangent(_ sender: UIButton) {
-        currentInput = tan(currentInput * .pi / 180)
-         dropUnusedZeroForInfoLabel()
-    }
-    
-    
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    //    override func preferredStatusBarHidden() -> Bool {
-    //        return true
-    //    }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
         let number = sender.currentTitle!
@@ -167,37 +92,16 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func clearButtonPressed(_ sender: UIButton) {
-        firstOperand = 0
-        secondOperand = 0
-        currentInput = 0
-        dotIsPlaced = false
-        displayResultLabel.text = "0"
-        operationSign = ""
-        textActionsLabel.text = ""
-    }
-    
-    //    + - / * mod
     @IBAction func twoOperandsSignPressed(_ sender: CalcButton) {
         firstOperand = currentInput
         stillTyping = false
         dotIsPlaced = false
-        //        operationSign = sender.currentTitle!
-        
         guard let getButtonValue = CalcButtonValue(rawValue: sender.id) else {return}
         operationSign = getButtonValue.getOperationSign
-        
-        
-        textActionsLabel.text! += operationSign // for secondary label
-    }
-    
-    func operateWithTwoOperands (operation: (Double, Double) -> Double) {
-        currentInput = operation(firstOperand, secondOperand)
-        stillTyping = false
+        textActionsLabel.text! += operationSign
     }
     
     @IBAction func equalitySignPressed(_ sender: UIButton) {
-        //        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "equalitySignPressed"), object: nil)
         if stillTyping {
             secondOperand = currentInput
             // the same as func dropUnusedZero below, but concat as +=
@@ -206,16 +110,13 @@ class ViewController: UIViewController {
                 textActionsLabel.text! += String(currentInput)
             }else {
                 textActionsLabel.text! += String(Int(currentInput))
-
             }
         }
-        
         switch operationSign {
         case "+":
             operateWithTwoOperands(operation: { first, second in
                 return first + second
             })
-        //operateWithTwoOperands{$0+$1}
         case "-": operateWithTwoOperands{$0-$1}
         case "×": operateWithTwoOperands{$0*$1}
         case "÷":
@@ -225,24 +126,44 @@ class ViewController: UIViewController {
                 operateWithTwoOperands{$0/$1}
             }
         case "mod":
-//            dropUnusedZero()
             currentInput = firstOperand.truncatingRemainder(dividingBy: secondOperand)
-//        if stillTyping{
-//            secondOperand = currentInput
-//        }
-
-        stillTyping = false
+            stillTyping = false
         default: break
             
         }
         dotIsPlaced = false
         
-        // label requires additional improvements
+        // second label requires additional improvements
         if !operationSign.isEmpty
             && !textActionsLabel.text!.isEmpty
             && sender.titleLabel!.text != "=" {
             dropUnusedZeroForInfoLabel()
         }
+    }
+    
+    func operateWithTwoOperands (operation: (Double, Double) -> Double) {
+        currentInput = operation(firstOperand, secondOperand)
+        stillTyping = false
+    }
+    
+    fileprivate func dropUnusedZeroForInfoLabel() {
+        let ifResultBecameDouble = displayResultLabel.text!.contains(".")
+        if dotIsPlaced || ifResultBecameDouble {
+            textActionsLabel.text! = String(currentInput)
+        }else {
+            textActionsLabel.text! = String(Int(currentInput))
+        }
+    }
+    
+    @IBAction func clearButtonPressed(_ sender: UIButton) {
+        firstOperand = 0
+        secondOperand = 0
+        currentInput = 0
+        dotIsPlaced = false
+        displayResultLabel.text = "0"
+        operationSign = ""
+        textActionsLabel.text = ""
+        //        stillTyping = false test once more
     }
     
     @IBAction func plusMinusButtonPressed(_ sender: UIButton) {
@@ -257,7 +178,7 @@ class ViewController: UIViewController {
             textActionsLabel.text! += String(currentInput)
         }else {
             textActionsLabel.text! += String(Int(currentInput))
-
+            
         }
         if firstOperand == 0 {
             currentInput = currentInput / 100
@@ -266,15 +187,6 @@ class ViewController: UIViewController {
         }
         stillTyping = false
         textActionsLabel.text! += "%"
-    }
-    
-    @IBAction func squareRootButtonPressed(_ sender: UIButton) {
-        if currentInput >= 0{
-            currentInput = sqrt(currentInput)
-        }else{
-            displayResultLabel.text = "ERROR"
-        }
-         dropUnusedZeroForInfoLabel()
     }
     
     @IBAction func dotButtonPressed(_ sender: UIButton) {
@@ -286,6 +198,40 @@ class ViewController: UIViewController {
             stillTyping = true
             dotIsPlaced=true
         }
+    }
+    
+    @IBAction func squareRootButtonPressed(_ sender: UIButton) {
+        if currentInput >= 0{
+            currentInput = sqrt(currentInput)
+        }else{
+            displayResultLabel.text = "ERROR"
+        }
+        dropUnusedZeroForInfoLabel()
+    }
+    
+    @IBAction func xСubed(_ sender: UIButton) {
+        currentInput = pow(currentInput, 3)
+        dropUnusedZeroForInfoLabel()
+    }
+    
+    @IBAction func xPowerOfTwo(_ sender: UIButton) {
+        currentInput *= currentInput
+        dropUnusedZeroForInfoLabel()
+    }
+    
+    @IBAction func sinus(_ sender: UIButton) {
+        currentInput = sin(currentInput * .pi / 180)
+        dropUnusedZeroForInfoLabel()
+    }
+    
+    @IBAction func cosine(_ sender: UIButton) {
+        currentInput = cos(currentInput * .pi / 180)
+        dropUnusedZeroForInfoLabel()
+    }
+    
+    @IBAction func tangent(_ sender: UIButton) {
+        currentInput = tan(currentInput * .pi / 180)
+        dropUnusedZeroForInfoLabel()
     }
 }
 

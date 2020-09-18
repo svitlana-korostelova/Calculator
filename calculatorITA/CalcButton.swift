@@ -9,20 +9,7 @@
 import UIKit
 
 enum CalcButtonValue: Int {
-    case plus = 10, minus, multiply
-    case divizion = 13
-    case equal = 14
-    case clear = 15
-    case reverseSignForNum = 16
-    case dot = 17
-    case percentage = 18
-    case squareRoot = 19
-    case modulo = 20
-    case xSquared = 21
-    case xCubed = 22
-    case sinus = 23
-    case cosine = 24
-    case tangent = 25
+    case plus = 10, minus, multiply, divizion, equal, clear, reverseSignForNum, dot, percentage, squareRoot, modulo, xSquared, xCubed, sinus, cosine, tangent
     
     fileprivate static var latestId = 25
     
