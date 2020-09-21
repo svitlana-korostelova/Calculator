@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -13,29 +13,27 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="calculatorITA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="I5O-IY-pYS">
-                                <rect key="frame" x="16" y="60" width="382" height="193.5"/>
+                                <rect key="frame" x="60" y="16" width="776" height="89.5"/>
                                 <color key="backgroundColor" name="lightest"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" name="tint"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="yu6-xa-WY6">
-                                <rect key="frame" x="16" y="314.5" width="382" height="531.5"/>
+                                <rect key="frame" x="60" y="131" width="776" height="246"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="zb7-Qv-hqf">
-                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="531.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="127" height="246"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BwT-K2-vla" customClass="CalcButton" customModule="calculatorITA" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="264.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="127" height="121.5"/>
                                                 <color key="backgroundColor" name="dark"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="mod">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="mod"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="id">
                                                         <integer key="value" value="20"/>
@@ -47,12 +45,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNO-aM-u31" customClass="CalcButton" customModule="calculatorITA" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="267.5" width="0.0" height="264"/>
+                                                <rect key="frame" x="0.0" y="124.5" width="127" height="121.5"/>
                                                 <color key="backgroundColor" name="dark"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="√">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="√"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="id">
                                                         <integer key="value" value="19"/>
@@ -66,15 +62,13 @@
                                         <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="fA1-uN-w80">
-                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="531.5"/>
+                                        <rect key="frame" x="130" y="0.0" width="126.5" height="246"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTe-na-Wke" customClass="CalcButton" customModule="calculatorITA" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="104"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="126.5" height="47"/>
                                                 <color key="backgroundColor" name="dark"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="x²">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="x²"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="id">
                                                         <integer key="value" value="21"/>
@@ -85,12 +79,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hp-Ko-ngb" customClass="CalcButton" customModule="calculatorITA" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="107" width="0.0" height="104"/>
+                                                <rect key="frame" x="0.0" y="50" width="126.5" height="46.5"/>
                                                 <color key="backgroundColor" name="dark"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="x³">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="x³"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="id">
                                                         <integer key="value" value="22"/>
@@ -101,12 +93,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCc-ol-WWf" customClass="CalcButton" customModule="calculatorITA" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="214" width="0.0" height="103.5"/>
+                                                <rect key="frame" x="0.0" y="99.5" width="126.5" height="47"/>
                                                 <color key="backgroundColor" name="dark"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="sin">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="sin"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="id">
                                                         <integer key="value" value="23"/>
@@ -117,12 +107,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQJ-Ih-cKg" customClass="CalcButton" customModule="calculatorITA" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="320.5" width="0.0" height="104"/>
+                                                <rect key="frame" x="0.0" y="149.5" width="126.5" height="47"/>
                                                 <color key="backgroundColor" name="dark"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="cos">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="cos"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="id">
                                                         <integer key="value" value="24"/>
@@ -133,12 +121,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vU2-ry-Zus" customClass="CalcButton" customModule="calculatorITA" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="427.5" width="0.0" height="104"/>
+                                                <rect key="frame" x="0.0" y="199" width="126.5" height="47"/>
                                                 <color key="backgroundColor" name="dark"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="tan">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="tan"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="id">
                                                         <integer key="value" value="25"/>
@@ -152,16 +138,14 @@
                                         <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Vfk-9L-Xhi">
-                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="531.5"/>
+                                        <rect key="frame" x="259.5" y="0.0" width="127" height="246"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBe-g1-l6g" customClass="CalcButton" customModule="calculatorITA" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="104"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="127" height="47"/>
                                                 <color key="backgroundColor" name="lighter"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <color key="tintColor" name="tint"/>
-                                                <state key="normal" title="С">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="С"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="id">
                                                         <integer key="value" value="15"/>
@@ -172,12 +156,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DoB-Bf-OHE" customClass="CalcButton" customModule="calculatorITA" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="107" width="93.5" height="104"/>
+                                                <rect key="frame" x="0.0" y="50" width="127" height="46.5"/>
                                                 <color key="backgroundColor" name="lighter"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="7">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="7"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="id">
                                                         <integer key="value" value="7"/>
@@ -188,12 +170,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jej-ax-J4J" customClass="CalcButton" customModule="calculatorITA" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="214" width="93.5" height="103.5"/>
+                                                <rect key="frame" x="0.0" y="99.5" width="127" height="47"/>
                                                 <color key="backgroundColor" name="lighter"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="4">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="4"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="id">
                                                         <integer key="value" value="4"/>
@@ -204,12 +184,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEZ-en-04F" customClass="CalcButton" customModule="calculatorITA" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="320.5" width="93.5" height="104"/>
+                                                <rect key="frame" x="0.0" y="149.5" width="127" height="47"/>
                                                 <color key="backgroundColor" name="lighter"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="1">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="1"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="id">
                                                         <integer key="value" value="1"/>
@@ -220,12 +198,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhm-mo-izH" customClass="CalcButton" customModule="calculatorITA" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="427.5" width="93.5" height="104"/>
+                                                <rect key="frame" x="0.0" y="199" width="127" height="47"/>
                                                 <color key="backgroundColor" name="lighter"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="%">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="%"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="id">
                                                         <integer key="value" value="18"/>
@@ -238,15 +214,13 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="XTU-4d-MID">
-                                        <rect key="frame" x="96.5" y="0.0" width="93" height="531.5"/>
+                                        <rect key="frame" x="389.5" y="0.0" width="127" height="246"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nh5-Hy-pRN" customClass="CalcButton" customModule="calculatorITA" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="93" height="104"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="127" height="47"/>
                                                 <color key="backgroundColor" name="lighter"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="+/-">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="+/-"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="id">
                                                         <integer key="value" value="16"/>
@@ -257,12 +231,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDG-LA-21h" customClass="CalcButton" customModule="calculatorITA" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="107" width="93" height="104"/>
+                                                <rect key="frame" x="0.0" y="50" width="127" height="46.5"/>
                                                 <color key="backgroundColor" name="lighter"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="8">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="8"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="id">
                                                         <integer key="value" value="8"/>
@@ -273,12 +245,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gl-Bd-itx" customClass="CalcButton" customModule="calculatorITA" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="214" width="93" height="103.5"/>
+                                                <rect key="frame" x="0.0" y="99.5" width="127" height="47"/>
                                                 <color key="backgroundColor" name="lighter"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="5">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="id">
                                                         <integer key="value" value="5"/>
@@ -289,12 +259,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBg-LR-PkV" customClass="CalcButton" customModule="calculatorITA" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="320.5" width="93" height="104"/>
+                                                <rect key="frame" x="0.0" y="149.5" width="127" height="47"/>
                                                 <color key="backgroundColor" name="lighter"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="2">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="2"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="id">
                                                         <integer key="value" value="2"/>
@@ -305,12 +273,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zQ-To-qPG" customClass="CalcButton" customModule="calculatorITA" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="427.5" width="93" height="104"/>
+                                                <rect key="frame" x="0.0" y="199" width="127" height="47"/>
                                                 <color key="backgroundColor" name="lighter"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="0">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="0"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="id">
                                                         <integer key="value" value="0"/>
@@ -323,15 +289,13 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="0iS-R3-HEs">
-                                        <rect key="frame" x="192.5" y="0.0" width="93.5" height="531.5"/>
+                                        <rect key="frame" x="519.5" y="0.0" width="126.5" height="246"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgE-Yf-uxO" customClass="CalcButton" customModule="calculatorITA" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="104"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="126.5" height="47"/>
                                                 <color key="backgroundColor" name="lighter"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="+">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="+"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="sign" value="+"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="id">
@@ -344,12 +308,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMG-cg-Hon" customClass="CalcButton" customModule="calculatorITA" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="107" width="93.5" height="104"/>
+                                                <rect key="frame" x="0.0" y="50" width="126.5" height="46.5"/>
                                                 <color key="backgroundColor" name="lighter"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="9">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="9"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="id">
                                                         <integer key="value" value="9"/>
@@ -360,12 +322,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Cx-1J-icN" customClass="CalcButton" customModule="calculatorITA" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="214" width="93.5" height="103.5"/>
+                                                <rect key="frame" x="0.0" y="99.5" width="126.5" height="47"/>
                                                 <color key="backgroundColor" name="lighter"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="6">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="6"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="id">
                                                         <integer key="value" value="6"/>
@@ -376,12 +336,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Etv-2Z-fff" customClass="CalcButton" customModule="calculatorITA" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="320.5" width="93.5" height="104"/>
+                                                <rect key="frame" x="0.0" y="149.5" width="126.5" height="47"/>
                                                 <color key="backgroundColor" name="lighter"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="3">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="3"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="id">
                                                         <integer key="value" value="3"/>
@@ -392,12 +350,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ua6-xK-oe8" customClass="CalcButton" customModule="calculatorITA" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="427.5" width="93.5" height="104"/>
+                                                <rect key="frame" x="0.0" y="199" width="126.5" height="47"/>
                                                 <color key="backgroundColor" name="lighter"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title=".">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="."/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="id">
                                                         <integer key="value" value="17"/>
@@ -410,18 +366,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="vnf-MZ-SP4">
-                                        <rect key="frame" x="289" y="0.0" width="93" height="531.5"/>
+                                        <rect key="frame" x="649" y="0.0" width="127" height="246"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="wPD-IM-jsu">
-                                                <rect key="frame" x="0.0" y="0.0" width="93" height="402.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="127" height="117"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="De6-SU-v47" customClass="CalcButton" customModule="calculatorITA" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="93" height="132"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="127" height="37"/>
                                                         <color key="backgroundColor" name="lighter"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                        <state key="normal" title="-">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
+                                                        <state key="normal" title="-"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="id">
                                                                 <integer key="value" value="11"/>
@@ -433,12 +387,10 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7RX-3z-lGc" customClass="CalcButton" customModule="calculatorITA" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="135" width="93" height="132.5"/>
+                                                        <rect key="frame" x="0.0" y="40" width="127" height="37"/>
                                                         <color key="backgroundColor" name="lighter"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                        <state key="normal" title="×">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
+                                                        <state key="normal" title="×"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="id">
                                                                 <integer key="value" value="12"/>
@@ -450,12 +402,10 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ki0-Hs-OKP" customClass="CalcButton" customModule="calculatorITA" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="270.5" width="93" height="132"/>
+                                                        <rect key="frame" x="0.0" y="80" width="127" height="37"/>
                                                         <color key="backgroundColor" name="lighter"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                        <state key="normal" title="÷">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
+                                                        <state key="normal" title="÷"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="id">
                                                                 <integer key="value" value="13"/>
@@ -469,15 +419,13 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVQ-Pu-j1I" customClass="CalcButton" customModule="calculatorITA" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="405.5" width="93" height="126"/>
+                                                <rect key="frame" x="0.0" y="120" width="127" height="126"/>
                                                 <color key="backgroundColor" name="lighter"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="126" id="fbY-94-74U"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="=">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="="/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="id">
                                                         <integer key="value" value="14"/>
@@ -492,7 +440,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEq-dS-Hcn">
-                                <rect key="frame" x="16" y="249.5" width="382" height="63"/>
+                                <rect key="frame" x="60" y="101.5" width="776" height="27.5"/>
                                 <color key="backgroundColor" name="lightest"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -544,7 +492,7 @@
             <color red="0.67500001192092896" green="0.86100000143051147" blue="0.70999997854232788" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="tint">
-            <color red="0.97963594592324987" green="1" blue="0.984675240843085" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.97807776492647269" green="1" blue="0.99029391172259684" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

@@ -50,7 +50,8 @@ class ViewController: UIViewController {
         programmerButton.isOpaque = false
         programmerButton.backgroundColor = UIColor(named: "dark")
         programmerStackView.addArrangedSubview(programmerButton)
-        setupUI() // check if needed
+        setupUI()
+        programmerButton.setTitleColor(UIColor(named: "tint"), for: .normal)
         programmerButton.titleLabel?.font = UIFont.systemFont(ofSize: 50)
         
         NotificationCenter.default.addObserver(self, selector: #selector(onOrientationChanged), name: UIDevice.orientationDidChangeNotification, object: nil)
@@ -98,6 +99,7 @@ class ViewController: UIViewController {
         dotIsPlaced = false
         guard let getButtonValue = CalcButtonValue(rawValue: sender.id) else {return}
         operationSign = getButtonValue.getOperationSign
+//         operationSign = getButtonValue //CalcButtonValue
         textActionsLabel.text! += operationSign
     }
     
@@ -114,6 +116,7 @@ class ViewController: UIViewController {
         }
         switch operationSign {
         case "+":
+//        case .plus:
             operateWithTwoOperands(operation: { first, second in
                 return first + second
             })
