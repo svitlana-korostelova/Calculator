@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BA5DA666250937710012CF1F /* calculatorITA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calculatorITA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA5DA666250937710012CF1F /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5DA669250937710012CF1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA5DA66B250937710012CF1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BA5DA66D250937710012CF1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 		BA5DA65D250937710012CF1F = {
 			isa = PBXGroup;
 			children = (
-				BA5DA668250937710012CF1F /* calculatorITA */,
+				BA5DA668250937710012CF1F /* Calculator */,
 				BA5DA667250937710012CF1F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,12 +50,12 @@
 		BA5DA667250937710012CF1F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BA5DA666250937710012CF1F /* calculatorITA.app */,
+				BA5DA666250937710012CF1F /* Calculator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BA5DA668250937710012CF1F /* calculatorITA */ = {
+		BA5DA668250937710012CF1F /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
 				BA8FB69F251328A900E6EEBD /* CalcButton.swift */,
@@ -67,15 +67,15 @@
 				BA5DA674250937740012CF1F /* LaunchScreen.storyboard */,
 				BA5DA677250937740012CF1F /* Info.plist */,
 			);
-			path = calculatorITA;
+			path = Calculator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BA5DA665250937710012CF1F /* calculatorITA */ = {
+		BA5DA665250937710012CF1F /* Calculator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BA5DA67A250937740012CF1F /* Build configuration list for PBXNativeTarget "calculatorITA" */;
+			buildConfigurationList = BA5DA67A250937740012CF1F /* Build configuration list for PBXNativeTarget "Calculator" */;
 			buildPhases = (
 				BA5DA662250937710012CF1F /* Sources */,
 				BA5DA663250937710012CF1F /* Frameworks */,
@@ -85,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = calculatorITA;
+			name = Calculator;
 			productName = calculatorITA;
-			productReference = BA5DA666250937710012CF1F /* calculatorITA.app */;
+			productReference = BA5DA666250937710012CF1F /* Calculator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BA5DA661250937710012CF1F /* Build configuration list for PBXProject "calculatorITA" */;
+			buildConfigurationList = BA5DA661250937710012CF1F /* Build configuration list for PBXProject "Calculator" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BA5DA665250937710012CF1F /* calculatorITA */,
+				BA5DA665250937710012CF1F /* Calculator */,
 			);
 		};
 /* End PBXProject section */
@@ -289,12 +289,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = calculatorITA/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Calculator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = svitlanakorostelova.gmail.com.calculatorITA;
+				PRODUCT_BUNDLE_IDENTIFIER = svitlanakorostelova.gmail.com.calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -306,12 +306,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = calculatorITA/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Calculator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = svitlanakorostelova.gmail.com.calculatorITA;
+				PRODUCT_BUNDLE_IDENTIFIER = svitlanakorostelova.gmail.com.calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -321,7 +321,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BA5DA661250937710012CF1F /* Build configuration list for PBXProject "calculatorITA" */ = {
+		BA5DA661250937710012CF1F /* Build configuration list for PBXProject "Calculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BA5DA678250937740012CF1F /* Debug */,
@@ -330,7 +330,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BA5DA67A250937740012CF1F /* Build configuration list for PBXNativeTarget "calculatorITA" */ = {
+		BA5DA67A250937740012CF1F /* Build configuration list for PBXNativeTarget "Calculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BA5DA67B250937740012CF1F /* Debug */,
